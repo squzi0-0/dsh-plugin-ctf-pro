@@ -1,0 +1,49 @@
+{
+  "name": "dsh-plugin-ctf-pro",
+  "version": "1.0.0",
+  "description": "Professional-grade CTF toolkit plugin for DSH — triage, crypto, web, reverse, pwn, forensics, stego, blockchain. Tools + expert skill files.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "ctf",
+    "security",
+    "crypto",
+    "pwn",
+    "reverse",
+    "forensics",
+    "stego"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "skills",
+    "tools",
+    "wordlists",
+    "patches"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf lib"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "patches/bundle.yaml"
+    },
+    "skills": "skills"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

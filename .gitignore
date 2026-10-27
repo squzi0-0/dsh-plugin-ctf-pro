@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+.tsup/
+# lib/ is shipped on purpose (compiled entry); comment the next line to rebuild from source only
+# lib/
